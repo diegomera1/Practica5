@@ -40,8 +40,8 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}  
       run: |
-        docker build -t diegomera1/docker-graphql_rest:$NEW_VERSION ./
-        docker build -t diegomera1/docker-graphql_rest:latest ./
+        docker build -t diegomera1/docker-graphql_rest:$NEW_VERSION .
+        docker build -t diegomera1/docker-graphql_rest:latest .
         
     - name: Push Docker Image
       env:
